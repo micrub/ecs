@@ -1,22 +1,27 @@
 # ecs
 
-data oriented, functional entity component system.
-
-[![Build Status](https://travis-ci.org/mreinstein/ecs.svg?branch=master)](https://travis-ci.org/mreinstein/ecs)
-
+DATA oriented, *functional* entity component system.
 
 ## what?
 
 Many games and simulations are built around object oriented classes and scene graphs.
 
-Scene graphs and object hierarchies often end up being a mess, where eventually one ends up facing difficult decisions around questions like "where does this particular piece of logic/state live?" There are certain bits of logic/state that cross-cut and don't fit cleanly in one place, and code and logic become entangled in various places in the graph.  Not all relationships in a game/simulation are modeled appropriately with parent/child relationships which is why we get into these situations.
+Structuring leads to questions like:
+
+> where does this particular piece of logic/state live?
+
+There are certain bits of logic/state that cross-cut and don't fit cleanly in one place, and code and logic become entangled in various places in the graph.  
+
+Not all relationships in a game/simulation are modeled appropriately with parent/child relationships which is why we get into these situations.
 
 
 ECS is an alternative architecture:
 
-* **E**ntities have 0 or more components
-* **C**omponents are pure data and have no behavior
-* **S**ystems have behavior but no data
+* **E**ntities have 0 or more components / subject , object
+* **C**omponents are pure data and have no behavior / predicate
+ * утверждать
+ * основывать на фактах
+* **S**ystems have behavior but no data /
 
 The entire ecs module here is about 100 lines of code, and offers an O(1) iterator at run time for querying for entities within systems.
 
