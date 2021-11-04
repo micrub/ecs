@@ -18,6 +18,7 @@
     "remove-array-items": "^3.0.0"
   },
   "devDependencies": {
+    "eslint": "^8.1.0",
     "tap": "^15.0.9"
   },
   "repository": {
